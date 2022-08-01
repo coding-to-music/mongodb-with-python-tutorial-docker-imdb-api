@@ -1,0 +1,21 @@
+{
+  "name": "mongodb-with-python-tutorial-docker-imdb-api",
+  "version": "1.0.0",
+  "description": "MongoDB with Pymongo Tutorial",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "git add . && git commit -m Build && git push",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruanbekker/mongodb-with-python-tutorial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruanbekker/mongodb-with-python-tutorial/issues"
+  },
+  "homepage": "https://github.com/ruanbekker/mongodb-with-python-tutorial#readme"
+}

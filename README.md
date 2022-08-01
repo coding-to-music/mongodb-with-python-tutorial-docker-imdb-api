@@ -1,4 +1,33 @@
+# mongodb-with-python-tutorial-docker-imdb-api
+
+# 🚀 MongoDB with Pymongo Tutorial 🚀
+
+https://github.com/coding-to-music/mongodb-with-python-tutorial-docker-imdb-api
+
+From / By Ruan Bekker https://github.com/ruanbekker
+
+https://github.com/ruanbekker/mongodb-with-python-tutorial
+
+## Environment variables:
+
+```java
+
+```
+
+## GitHub
+
+```java
+git init
+git add .
+git remote remove origin
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:coding-to-music/mongodb-with-python-tutorial-docker-imdb-api.git
+git push -u origin main
+```
+
 # mongodb-with-python-tutorial
+
 MongoDB with Pymongo Tutorial
 
 ### MongoDB Server
@@ -41,7 +70,6 @@ Making a connection with authentication:
 
 ### Listing Databases
 
-
 ```
 >>> client.database_names()
 ['admin', 'config', 'local']
@@ -55,7 +83,7 @@ Making a connection with authentication:
 ['system.sessions']
 ```
 
-### Write One Document 
+### Write One Document
 
 Create a database `store_db`, use the `transactions` collection and write a document to it.
 
@@ -63,12 +91,12 @@ Create a database `store_db`, use the `transactions` collection and write a docu
 >>> db = client.store_db
 >>> transactions = db.transactions
 >>> doc_data = {
-    'store_name': 'sportsmans', 
-    'branch_name': 'tygervalley', 
-    'account_id': 'sns_03821023', 
-    'total_costs': 109.20, 
-    'products_purchased': ['cricket bat', 'cricket ball', 'sports hat'], 
-    'purchase_method': 
+    'store_name': 'sportsmans',
+    'branch_name': 'tygervalley',
+    'account_id': 'sns_03821023',
+    'total_costs': 109.20,
+    'products_purchased': ['cricket bat', 'cricket ball', 'sports hat'],
+    'purchase_method':
     'credit card'
 }
 >>> response = transactions.insert_one(doc_data)
@@ -89,20 +117,20 @@ We can batch up our writes:
 
 ```
 >>> transaction_1 = {
-    'store_name': 'sportsmans', 'branch_name': 'tygervalley', 
-    'account_id': 'sns_09121024', 'total_costs': 129.84, 
-    'products_purchased': ['sportsdrink', 'sunglasses', 'sports illustrated'], 
+    'store_name': 'sportsmans', 'branch_name': 'tygervalley',
+    'account_id': 'sns_09121024', 'total_costs': 129.84,
+    'products_purchased': ['sportsdrink', 'sunglasses', 'sports illustrated'],
     'purchase_method': 'credit card'
 }
 >>> transaction_2 = {
-    'store_name': 'burger king', 'branch_name': 
-    'somerset west', 'account_id': 'bk_29151823', 
-    'total_costs': 89.99, 'products_purchased': ['cheese burger', 'pepsi'], 
+    'store_name': 'burger king', 'branch_name':
+    'somerset west', 'account_id': 'bk_29151823',
+    'total_costs': 89.99, 'products_purchased': ['cheese burger', 'pepsi'],
     'purchase_method': 'cash'
 }
 >>> transaction_3 = {
-    'store_name': 'game', 'branch_name': 'bellvile', 'account_id': 'gm_49121229', 
-    'total_costs': 499.99, 'products_purchased': ['ps4 remote'], 
+    'store_name': 'game', 'branch_name': 'bellvile', 'account_id': 'gm_49121229',
+    'total_costs': 499.99, 'products_purchased': ['ps4 remote'],
     'purchase_method': 'cash'
 }
 >>> response = transactions.insert_many([transaction_1, transaction_2, transaction_3])
@@ -199,10 +227,10 @@ ne  - Not Equals
 
 Let's say we want to change a transactions payment method from credit card to account:
 
-```
+````
 >>> transactions.find_one({'account_id':'sns_03821023'})
 {u'account_id': u'sns_03821023', u'store_name': u'sportsmans', u'purchase_method': u'credit card', u'branch_name': u'tygervalley', u'products_purchased': [u'cricket bat', u'cricket ball', u'sports hat'], u'_id': ObjectId('5cb18881df585e003c976d5d'), u'total_costs': 109.2}```
-```
+````
 
 Update the purchase_method to account:
 
@@ -223,7 +251,6 @@ This examples is only intended for a single document and mongodb only updates on
 ```
 transactions.update( {'k': 'v'}, {'$set': {'k': 'new_v'}},{multi:true})
 ```
-
 
 ### Filters
 
@@ -407,8 +434,8 @@ u'Cape Town'
 ```
 
 ## Datasets:
-- https://raw.githubusercontent.com/steveren/docs-assets/charts-tutorial/movieDetails.json
 
+- https://raw.githubusercontent.com/steveren/docs-assets/charts-tutorial/movieDetails.json
 
 ## Resources
 
